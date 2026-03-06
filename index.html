@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Plushies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Design Your Custom Plushie</h1>
+        <p>Choose your favorite options to create a unique plush toy!</p>
+    </header>
+
+    <main>
+        <section id="customization">
+            <h2>Customization Options</h2>
+            <form id="plushie-form">
+                <label for="type">Plushie Type:</label>
+                <select id="type">
+                    <option value="bear">Bear</option>
+                    <option value="rabbit">Rabbit</option>
+                    <option value="cat">Cat</option>
+                    <option value="dog">Dog</option>
+                </select>
+
+                <label for="color">Color:</label>
+                <select id="color">
+                    <option value="pink">Pink</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                </select>
+
+                <label for="accessory">Accessory:</label>
+                <select id="accessory">
+                    <option value="none">None</option>
+                    <option value="hat">Hat</option>
+                    <option value="scarf">Scarf</option>
+                    <option value="bow">Bow</option>
+                </select>
+
+                <button type="button" id="preview-btn">Preview</button>
+            </form>
+        </section>
+
+        <section id="preview">
+            <h2>Your Plushie Preview</h2>
+            <div id="plushie-preview">
+                <p id="description">Select options and click Preview to see your custom plushie!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Custom Plushies. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
