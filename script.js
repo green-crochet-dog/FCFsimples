@@ -16,21 +16,41 @@ document.getElementById('preview-btn').addEventListener('click', async function(
         canvas.width = 300;
         canvas.height = 300;
         const ctx = canvas.getContext('2d');
-        // fill background with the chosen color (fallback to grey if color not valid)
-        ctx.fillStyle = color || '#ccc';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = '#000';
-        ctx.font = '20px sans-serif';
-        ctx.fillText(type, 10, 40);
-        if (accessory !== 'none') {
-            ctx.fillText(accessory, 10, 80);
-        }
-        ctx.fillText(color, 10, 120);
 
-        const img = document.getElementById('plushie-image');
-        img.src = canvas.toDataURL();
-        img.style.display = 'block';
-        document.getElementById('description').innerHTML = description + ' (local preview)';
+        // Load base plushie image
+        const baseImg = new Image();
+        baseImg.src = `images/${type}.svg`;
+        baseImg.onload = () => {
+            console.log('Base image loaded:', type);
+            ctx.drawImage(baseImg, 0, 0, canvas.width, canvas.height);
+
+            // Apply color tint
+            // ctx.globalCompositeOperation = 'multiply';
+            // ctx.fillStyle = color || '#ccc';
+            // ctx.fillRect(0, 0, canvas.width, canvas.height);
+            // ctx.globalCompositeOperation = 'source-over';
+
+            // If accessory is selected, load and draw it on top
+            if (accessory !== 'none') {
+                const accImg = new Image();
+                accImg.src = `images/${accessory}.svg`;
+                accImg.onload = () => {
+                    console.log('Accessory image loaded:', accessory);
+                    ctx.drawImage(accImg, 0, 0, canvas.width, canvas.height);
+                    const img = document.getElementById('plushie-image');
+                    img.src = canvas.toDataURL();
+                    img.style.display = 'block';
+                    document.getElementById('description').innerHTML = description + ' (local preview)';
+                };
+                accImg.onerror = () => console.error('Failed to load accessory:', accessory);
+            } else {
+                const img = document.getElementById('plushie-image');
+                img.src = canvas.toDataURL();
+                img.style.display = 'block';
+                document.getElementById('description').innerHTML = description + ' (local preview)';
+            }
+        };
+        baseImg.onerror = () => console.error('Failed to load base:', type);
         return;
     }
 
