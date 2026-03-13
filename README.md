@@ -18,3 +18,4 @@ Open `index.html` in a web browser to start customizing your plushie.
 - `index.html`: Main HTML file
 - `styles.css`: CSS styles
 - `script.js`: JavaScript for interactivity
+we are restoring an old version
