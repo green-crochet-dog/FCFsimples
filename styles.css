@@ -12,6 +12,7 @@ header {
     color: rgb(112, 67, 67);
     text-align: center;
     padding: 1rem;
+    border-radius: 20px;
 }
 
 main {
@@ -42,10 +43,12 @@ label {
     font-weight: bold;
 }
 
-select {
+input[type="password"] {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 button {
@@ -53,7 +56,7 @@ button {
     background-color: #bb7d64;
     color: rgb(112, 67, 67);
     border: none;
-    border-radius: 4px;
+    border-radius: 43px;
     cursor: pointer;
 }
 
@@ -66,15 +69,23 @@ button:hover {
     text-align: center;
     min-height: 200px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 2px dashed #ccc;
     border-radius: 8px;
 }
 
+#plushie-image {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #333;
+    background-color: #a97575;
     color: white;
+    border-radius: 20px;
 }

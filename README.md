@@ -7,7 +7,11 @@ A simple website for designing customizable plushies.
 - Choose from different plushie types (bear, rabbit, cat, dog)
 - Select colors (pink, blue, green, yellow)
 - Add accessories (hat, scarf, bow)
-- Preview your custom plushie with emojis
+- Preview your custom plushie with a generated image that displays the chosen options
+
+## Image generation
+
+The **Preview** button will create an image showing the selections you made (type, color, accessory). If you provide an OpenAI API key it will attempt to fetch a realistic plushie image; otherwise a simple local placeholder image is drawn.
 
 ## Usage
 
