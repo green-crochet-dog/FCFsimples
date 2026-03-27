@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Splash&display=swap');
 body {
-    font-family: 'The Girl Next Door', cursive;
+    font-family: 'Dongle', cursive;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #ffffff;
+    color: #77b46f;
+    font-size: 40px;
 }
 
 header {
-    background-color: #bb7d64;
-    color: rgb(112, 67, 67);
+    background-color: #8fca87;
+    color: rgba(32, 52, 34, 0.914);
     text-align: center;
     padding: 1rem;
 }
@@ -30,6 +32,9 @@ section {
 
 h1, h2 {
     margin-top: 0;
+    font-family: "Splash", cursive;
+   font-weight: 400;
+  font-style: normal;;
 }
 
 form {
@@ -50,15 +55,15 @@ select {
 
 button {
     padding: 0.5rem 1rem;
-    background-color: #bb7d64;
-    color: rgb(112, 67, 67);
+    background-color: #bdebbe;
+    color: rgb(124, 172, 129);
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color:#a0574c;
+    background-color:#40855a;
     color:whitesmoke;
 }
 
@@ -75,6 +80,6 @@ button:hover {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #333;
+    background-color: #8fca87;
     color: white;
 }
