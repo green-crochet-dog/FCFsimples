@@ -9,6 +9,7 @@ document.getElementById('preview-btn').addEventListener('click', function() {
         case 'rabbit': emoji = '🐰'; break;
         case 'cat': emoji = '🐱'; break;
         case 'dog': emoji = '🐶'; break;
+        case 'flamingo': emoji = '🦩'; break;
         default: emoji = '❓';
     }
 
@@ -17,6 +18,10 @@ document.getElementById('preview-btn').addEventListener('click', function() {
         case 'hat': accessoryEmoji = '🎩'; break;
         case 'scarf': accessoryEmoji = '🧣'; break;
         case 'bow': accessoryEmoji = '🎀'; break;
+         case 'kimono': accessoryEmoji = '👘'; break;
+          case 'headphones': accessoryEmoji = '🎧'; break;
+           case 'sunglasses': accessoryEmoji = '🕶️'; break;
+           case 'rollerblades': accessoryEmoji = ' '; break;
         default: accessoryEmoji = '';
     }
 
